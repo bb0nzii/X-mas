@@ -1,0 +1,7 @@
+@keyframes tree-wobble {
+  0%   { transform: rotate(0deg); }
+  20%  { transform: rotate(1deg); }
+  50%  { transform: rotate(-1deg); }
+  80%  { transform: rotate(1deg); }
+  100% { transform: rotate(0deg); }
+}
