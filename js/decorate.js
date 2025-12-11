@@ -146,6 +146,21 @@
       removePlaced(item.id);
     });
 
+    // 모바일용 더블탭 삭제
+    let lastTap = 0;
+    el.addEventListener("touchend", (ev) => {
+    const now = Date.now();
+    const gap = now - lastTap;
+
+    if (gap > 0 && gap < 300) {
+        ev.stopPropagation();
+        removePlaced(item.id);
+    }
+
+    lastTap = now;
+    });
+
+
     // 드래그 이동
     makeDraggable(el, item);
 
